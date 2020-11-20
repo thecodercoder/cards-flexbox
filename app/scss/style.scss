@@ -1,0 +1,75 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #101010;  
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 300px;
+  max-width: 450px;
+  overflow: hidden;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 5px;
+  box-shadow: 3px 2px 14px rgba(255,255,255,0.2);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    transform: translateY(-1rem);
+    box-shadow: 2px 3px 18px rgba(255,255,255,0.4);
+  }
+
+  &__image {
+    flex: 0 0 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  &__snippet {
+    margin-bottom: 0.5rem;
+  }
+
+  &__readmore {
+    margin-top: auto;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
